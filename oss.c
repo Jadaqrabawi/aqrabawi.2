@@ -15,7 +15,6 @@
  #include <stdlib.h>     
  #include <unistd.h>        
  #include <sys/types.h> 
- #include <sys/wait.h>
  #include <signal.h>     
  #include <time.h>       
  #include <string.h>     
@@ -193,7 +192,7 @@
   
          // Check for any terminated children using a nonblocking wait.
          int status;
-         pid_t pidTerm = waitpid(-1, &status, WNOHANG);
+         pid_t pidTerm = waitpid(-1, &status);
          if (pidTerm > 0) {
              // Search for the terminated child's entry in the process table.
              for (int i = 0; i < MAX_CHILDREN; i++) {
