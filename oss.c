@@ -11,27 +11,27 @@
  *   -i launchIntervalMs  Interval (in simulated milliseconds) between launches (default: 100)
  */
 
- #include <stdio.h>      // Standard I/O functions (printf, perror, etc.)
- #include <stdlib.h>     // Standard library functions (atoi, exit, etc.)
- #include <unistd.h>     // POSIX API: fork, execl, getopt, etc.
- #include <sys/shm.h>    // Shared memory functions (shmget, shmat, shmdt, shmctl)
- #include <sys/ipc.h>    // Interprocess communication key definitions
- #include <sys/types.h>  // Data types used in system calls
- #include <sys/wait.h>   // waitpid function for non-blocking wait of child processes
- #include <signal.h>     // Signal handling functions (signal, kill, etc.)
- #include <time.h>       // Time functions (srand, time, etc.)
- #include <string.h>     // String manipulation functions
- #include <errno.h>      // Error handling
- #include <stdbool.h>    // Boolean type definitions (true, false)
- #include <getopt.h>     // Command-line option parsing
+ #include <stdio.h>      
+ #include <stdlib.h>     
+ #include <unistd.h>     
+ #include <sys/shm.h>    
+ #include <sys/ipc.h>    
+ #include <sys/types.h>  
+ #include <sys/wait.h>   
+ #include <signal.h>     
+ #include <time.h>       
+ #include <string.h>     
+ #include <errno.h>      
+ #include <stdbool.h>    
+ #include <getopt.h>     
  
- // Define key for shared memory segment.
+ // Defining the key for shared memory segment.
  #define SHMKEY 9876
  
  // Maximum number of child processes to track in the process table.
  #define MAX_CHILDREN 20
  
- // Constant representing one billion (used for nanosecond conversion).
+ // Nanosecond conversion.
  #define ONE_BILLION 1000000000ULL
  
  // Default command-line parameters if not provided by the user.
@@ -48,7 +48,6 @@
      int startNano;       // Simulated clock nanoseconds at which the worker was launched
  } PCB;
  
- // Global process table (array of PCBs) to track worker processes.
  PCB processTable[MAX_CHILDREN];
  
  // Global variables for shared memory management.

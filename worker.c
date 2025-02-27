@@ -6,16 +6,15 @@
  *              and busy-loops (without sleep) until the simulated clock passes that target.
  *
  * Usage: worker <secondsToStay> <nanoToStay>
- *   e.g., ./worker 5 500000  -> run for 5 seconds and 500000 nanoseconds (simulated time)
  */
 
- #include <stdio.h>      // For standard I/O functions: printf, fprintf, perror
- #include <stdlib.h>     // For standard library functions: atoi, exit
- #include <unistd.h>     // For POSIX functions: getpid, getppid, and shmat
- #include <sys/shm.h>    // For shared memory functions: shmget, shmat, shmdt
- #include <sys/ipc.h>    // For IPC key definitions used in shared memory
- #include <signal.h>     // For signal handling: signal
- #include <stdbool.h>    // For boolean type: true, false
+ #include <stdio.h>      
+ #include <stdlib.h>     
+ #include <unistd.h>     
+ #include <sys/shm.h>    
+ #include <sys/ipc.h>    
+ #include <signal.h>     
+ #include <stdbool.h>    
  
  // Define the shared memory key for the simulated clock.
  #define SHMKEY 9876

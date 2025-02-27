@@ -51,26 +51,9 @@ This project simulates a simple multi-process system that uses a shared, simulat
   - Busy-loops (without using any sleep functions) until the simulated clock exceeds its target time.
   - Outputs periodic status updates (each time the simulated seconds change) and a final termination message when its time has elapsed.
 
-> **Note:** The **worker** executable is intended to be launched by **oss**. Running **worker** directly is only recommended for testing purposes.
-
-
+> **Note:** The **worker** executable is intended to be launched by **oss**.
 
 ## Detailed Instructions
-
-### Compilation
-
-1. **Open a Terminal**  
-   Navigate to your project directory:
-   ```bash
-   cd aqrabawi.1
-   ```
-
-2. **Compile the Project**  
-   Use the provided Makefile to compile both executables:
-   ```bash
-   make all
-   ```
-   This command compiles the source files for both **oss** and **worker** and creates their respective executables.
 
 ### Running the Project
 
@@ -98,20 +81,12 @@ For testing and debugging, you can run the **worker** executable directly:
 ```bash
 ./worker <secondsToStay> <nanoToStay>
 ```
-**Example:**
-```bash
-./worker 5 500000
-```
-This command will run a worker process for 5 simulated seconds and 500,000 simulated nanoseconds.
-
 ### Cleaning Up
 
 To remove all compiled object files and executables, run:
 ```bash
 make clean
 ```
-
-
 
 ## Additional Information
 
@@ -126,9 +101,6 @@ make clean
   ```bash
   git clone https://github.com/Jadaqrabawi/aqrabawi.1.git
   ```
-
-- **Project Purpose**  
-  This assignment is designed to enhance your skills in process management, shared memory usage, and simulated time control in a Linux environment. It demonstrates the use of system calls such as `fork()`, `exec()`, `waitpid()`, and shared memory functions to create a simple operating system simulation.
-
+  
 - **Usage Note**  
-  The **worker** executable is typically invoked by **oss**. Running **worker** directly is recommended only for testing and debugging purposes.
+  The **worker** executable is typically invoked by **oss**. 

@@ -8,16 +8,13 @@ Dublin1200#
 git config --global user.name "jadaqrabawi"
 git config --global user.email "jadaqrabawi7@gmail.com"
 
-git add .
+echo "# aqrabawi.1" >> README.md
 git init
-
-git status
-
-git commit -m "First commit"
-
-git push origin main
-
-/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/https:www.github.com/jadaqrabawi
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Jadaqrabawi/aqrabawi.1.git
+git push -u origin main
 
 Jmagm4@umsytem.edu
 

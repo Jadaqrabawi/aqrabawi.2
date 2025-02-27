@@ -38,11 +38,9 @@ oss.o: oss.c
 
 # Rule to compile worker.c into the object file worker.o.
 worker.o: worker.c
-	# Compile worker.c into an object file (worker.o) using the -c flag.
 	$(CC) $(CFLAGS) -c worker.c
 
 # "clean" target to remove all generated object files and executables.
 clean:
 	# Remove all .o (object) files and the executables (oss and worker)
 	rm -f *.o $(TARGETS)
-	@echo "Clean complete: All object files and executables have been removed."
