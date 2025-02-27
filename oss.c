@@ -265,7 +265,7 @@
   
      // Cleanup: detach and remove shared memory before exiting.
      shmdt(shmClock);
-     shmctl(shmid, IPC_RMID, NULL);
+     shmctl(shmid, NULL);
      return 0;
  }
  
