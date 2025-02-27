@@ -53,8 +53,6 @@ This project simulates a simple multi-process system that uses a shared, simulat
 
 > **Note:** The **worker** executable is intended to be launched by **oss**.
 
-## Detailed Instructions
-
 ### Running the Project
 
 #### Running the `oss` Executable
