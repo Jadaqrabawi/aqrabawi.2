@@ -80,7 +80,7 @@
      int startNano = shmClock[1];
  
      // Calculate the target termination time by adding the desired duration
-     // (provided by the command-line arguments) to the starting simulated time.
+
      int targetSec = startSec + secondsToStay;
      int targetNano = startNano + nanoToStay;
      // Normalize the target time if nanoseconds exceed one billion.
@@ -118,7 +118,6 @@
              lastPrintedSec = shmClock[0];
          }
          // The busy-loop does not call sleep() or usleep() because the simulation
-         // depends entirely on the increments of the shared simulated clock.
      }
  
      // Once the loop exits (i.e., the worker's time has expired), detach the shared memory.
