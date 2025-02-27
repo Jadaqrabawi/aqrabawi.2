@@ -42,5 +42,5 @@ worker.o: worker.c
 
 # "clean" target to remove all generated object files and executables.
 clean:
-	# Remove all .o (object) files and the executables (oss and worker)
+	# Remove all .o (object) files and the executables
 	rm -f *.o $(TARGETS)
