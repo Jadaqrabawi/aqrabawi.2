@@ -84,7 +84,10 @@
      int targetSec = startSec + secondsToStay;
      int targetNano = startNano + nanoToStay;
      // Normalize the target time if nanoseconds exceed one billion.
-  
+     if (targetNano >= ONE_BILLION) {
+         targetSec += targetNano / ONE_BILLION;
+         targetNano %= ONE_BILLION;
+     }
  
      // Output initial status information including process IDs,
      // current simulated clock, and target termination time.
