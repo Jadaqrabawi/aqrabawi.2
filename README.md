@@ -99,7 +99,7 @@ make clean
 - **Version Control**  
   This project is managed using Git. To access the repository:
   ```bash
-  git clone https://github.com/Jadaqrabawi/aqrabawi.1.git
+  git clone https://github.com/Jadaqrabawi/aqrabawi.2.git
   ```
   
 - **Usage Note**  
