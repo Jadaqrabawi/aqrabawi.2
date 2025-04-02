@@ -1,18 +1,18 @@
 
-# Simulated Clock Multi-Process Project (aqrabawi.1)
+# Simulated Clock Multi-Process Project (aqrabawi.2)
 
 ## Quick Start
 
 1. **Download or Clone the Project**  
    Clone the repository using:
    ```bash
-   git clone https://github.com/Jadaqrabawi/aqrabawi.1.git
+   git clone https://github.com/Jadaqrabawi/aqrabawi.2.git
    ```
    Or download and extract the project archive.
 
 2. **Navigate to the Project Directory**
    ```bash
-   cd aqrabawi.1
+   cd aqrabawi.2
    ```
 
 3. **Clean the Project (Optional)**
