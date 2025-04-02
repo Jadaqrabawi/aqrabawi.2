@@ -13,8 +13,11 @@
 
  #include <stdio.h>      
  #include <stdlib.h>     
- #include <unistd.h>        
- #include <sys/types.h> 
+ #include <unistd.h>     
+ #include <sys/shm.h>    
+ #include <sys/ipc.h>    
+ #include <sys/types.h>  
+ #include <sys/wait.h>   
  #include <signal.h>     
  #include <time.h>       
  #include <string.h>     
@@ -192,7 +195,7 @@
   
          // Check for any terminated children using a nonblocking wait.
          int status;
-         pid_t pidTerm = waitpid(-1, &status);
+         pid_t pidTerm = waitpid(-1, &status, WNOHANG);
          if (pidTerm > 0) {
              // Search for the terminated child's entry in the process table.
              for (int i = 0; i < MAX_CHILDREN; i++) {
@@ -265,7 +268,7 @@
   
      // Cleanup: detach and remove shared memory before exiting.
      shmdt(shmClock);
-     shmctl(shmid, NULL);
+     shmctl(shmid, IPC_RMID, NULL);
      return 0;
  }
  
